@@ -107,10 +107,10 @@ void part2(){
     BonusDice bonus = BonusDice(d_1_bon);
     PenaltyDice pen = PenaltyDice(d_1_pen);
     ThreeDicePool triple = ThreeDicePool (d_1_triple);
-    ofstream simple_2("2_simple.txt");
-    ofstream pen_2("2_pen.txt");
-    ofstream bonus_2("2_bonus.txt");
-    ofstream triple_2("2_triple.txt");
+    ofstream simple_2("raw/2_simple.txt");
+    ofstream pen_2("raw/2_pen.txt");
+    ofstream bonus_2("raw/2_bonus.txt");
+    ofstream triple_2("raw/2_triple.txt");
     unsigned long N = 1000000;
     unsigned long M = 1000000;
         for (int i =0; i<100; ++i){
@@ -160,13 +160,13 @@ void part3(){
     DoubleDicePool ddp = DoubleDicePool(d);
     cout<<expected_value(dd, 10000000)<<endl;
     cout<<expected_value(ddp, 10000000)<<endl;
-    ofstream double_3("3_double.txt");
+    ofstream double_3("raw/3_double.txt");
     unsigned long N = 1000000;
     for (int i =0; i<200; ++i){
             double_3<<value_probability(i+1, dd, N)<<endl;
         }
     double_3.close();
-    ofstream double_3p("3_doublep.txt");
+    ofstream double_3p("raw/3_doublep.txt");
     for (int i =0; i<200; ++i){
             double_3p<<value_probability(i+1, ddp, N)<<endl;
         }
